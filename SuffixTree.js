@@ -1,4 +1,5 @@
 /*jshint esnext: true, -W097  */
+/* globals console */
 'use strict';
 
 class Node {
