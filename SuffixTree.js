@@ -139,14 +139,13 @@ export class SuffixTree {
     return longestSubstrings.sort((a, b) => b.length - a.length).slice(0, n);
   }
 
-
-  print() {
+  toString() {
     var text = this.text;
 
     function traverse(node, offset='', ret='') {
       for(var t in node.transition) {
         var [s, a, b] = node.transition[t];
-        ret += offset + '("' + text.substring(a, b + 1) + '", ' + a + ', ' + b + ')' + '\r\n';
+        ret += offset + '["' + text.substring(a, b + 1) + '", ' + a + ', ' + b + ']' + '\r\n';
         ret += traverse(s, offset+'\t');
       }
       return ret;
@@ -155,8 +154,7 @@ export class SuffixTree {
     return res;
   }
 
-
-  toString() {
-    return this.print();
+  print() {
+    console.log(this.toString());
   }
 }
