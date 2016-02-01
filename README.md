@@ -1,8 +1,8 @@
-## Ukkonen's Algorithm: On–line construction of suffix trees
+# Ukkonen's Algorithm: On–line construction of suffix trees
 
 JavaScript (ES6) implementation of Ukkonen's algorithm (https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf) for the on-line construction of suffix trees.
 
-### Example
+## Example
 
 ```js
 import { SuffixTree } from './SuffixTree';
@@ -33,3 +33,6 @@ tree.addString('MISSISSIPPI$').print();
 ["$", 11, Infinity]
 ```
 
+## License
+
+Licensed under the [MIT License](http://opensource.org/licenses/mit-license.php).
